@@ -1,0 +1,21 @@
+.footer {
+  padding: 35px 8%;
+  text-align: center;
+  background: rgba(5, 8, 22, 0.96);
+  border-top: 1px solid rgba(0, 245, 255, 0.14);
+}
+
+.footer h3 {
+  color: #00f5ff;
+  margin-bottom: 8px;
+}
+
+.footer p {
+  color: #dbeafe;
+  margin-bottom: 10px;
+}
+
+.footer span {
+  color: #7f8baa;
+  font-size: 0.9rem;
+}
