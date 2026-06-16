@@ -67,3 +67,11 @@
     padding: 35px 22px;
   }
 }
+
+
+.resume-btn.share {
+  border: none;
+  color: #050816;
+  background: linear-gradient(135deg, #ffffff, #00f5ff);
+  cursor: pointer;
+}
