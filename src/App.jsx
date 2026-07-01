@@ -2,7 +2,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Timeline from "./components/Timeline";
+import Experience from "./components/Experience";
+import Terminal from "./components/Terminal";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
@@ -10,8 +11,8 @@ import Footer from "./components/Footer";
 
 import ScrollProgress from "./components/ScrollProgress";
 import BackToTop from "./components/BackToTop";
-import CustomCursor from "./components/CustomCursor";
 import Loader from "./components/Loader";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       <Hero />
       <About />
       <Skills />
-      <Timeline />
+      <Experience />
+      <Terminal />
       <Projects />
       <Resume />
       <Contact />

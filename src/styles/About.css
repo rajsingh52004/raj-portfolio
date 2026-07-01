@@ -1,15 +1,23 @@
 .about-section {
+  position: relative;
   background:
-    radial-gradient(circle at top left, rgba(0, 245, 255, 0.08), transparent 35%),
+    radial-gradient(circle at top left, rgba(0, 245, 255, 0.1), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(108, 99, 255, 0.09), transparent 35%),
     #050816;
-  display: flex;
-  align-items: center;
+  padding: 120px 8%;
+  overflow: hidden;
 }
 
-.about-card {
-  width: 100%;
-  padding: 55px;
-  border-radius: 32px;
+.about-container {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 34px;
+  align-items: stretch;
+}
+
+.about-left {
+  padding: 50px;
+  border-radius: 34px;
   background: rgba(255, 255, 255, 0.055);
   border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(18px);
@@ -18,33 +26,208 @@
 
 .section-tag {
   color: #00f5ff;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 14px;
 }
 
-.about-card h2 {
+.about-left h2 {
   max-width: 920px;
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1.15;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.14;
+  margin-bottom: 22px;
+  color: #ffffff;
+}
+
+.about-summary {
+  max-width: 980px;
+  color: #aab6d3;
+  line-height: 1.85;
+  font-size: 1.03rem;
+  margin-bottom: 30px;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.about-highlights span {
+  padding: 15px 16px;
+  border-radius: 16px;
+  background: rgba(0, 245, 255, 0.07);
+  border: 1px solid rgba(0, 245, 255, 0.14);
+  color: #dbeafe;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.about-profile-card {
+  position: relative;
+  overflow: hidden;
+  padding: 34px;
+  border-radius: 34px;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 245, 255, 0.12),
+    rgba(108, 99, 255, 0.07)
+  );
+  border: 1px solid rgba(0, 245, 255, 0.2);
+  box-shadow: 0 35px 90px rgba(0, 245, 255, 0.11);
+  min-height: 100%;
+}
+
+.profile-glow {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: rgba(0, 245, 255, 0.18);
+  filter: blur(70px);
+  top: -70px;
+  right: -80px;
+}
+
+.about-profile-card h3 {
+  position: relative;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.about-profile-card > p {
+  position: relative;
+  color: #00f5ff;
+  font-weight: 800;
   margin-bottom: 22px;
 }
 
-.about-card p {
-  max-width: 980px;
-  color: #aab6d3;
-  line-height: 1.8;
-  font-size: 1.02rem;
+.profile-status {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  border-radius: 999px;
+  background: rgba(0, 255, 149, 0.1);
+  border: 1px solid rgba(0, 255, 149, 0.25);
+  color: #00ff95;
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+.profile-status span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00ff95;
+  box-shadow: 0 0 18px #00ff95;
+}
+
+.profile-details {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.profile-details div {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-details strong {
+  display: block;
+  color: #00f5ff;
+  font-size: 1.7rem;
+  margin-bottom: 4px;
+}
+
+.profile-details small {
+  color: #dbeafe;
+  font-weight: 700;
+}
+
+.profile-location {
+  position: relative;
+  color: #dbeafe;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.profile-location svg {
+  color: #00f5ff;
+}
+
+.about-expertise {
+  margin-top: 36px;
+  padding: 36px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-sub-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.about-sub-heading svg {
+  color: #00f5ff;
+  font-size: 1.6rem;
+}
+
+.about-sub-heading h3 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #ffffff;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.expertise-card {
+  min-height: 115px;
+  border-radius: 22px;
+  background: rgba(0, 245, 255, 0.065);
+  border: 1px solid rgba(0, 245, 255, 0.15);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 8px;
+  color: #dbeafe;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.expertise-card svg {
+  color: #00f5ff;
+  font-size: 1.9rem;
+}
+
+.expertise-card:hover {
+  border-color: rgba(0, 245, 255, 0.5);
+  box-shadow: 0 25px 70px rgba(0, 245, 255, 0.13);
 }
 
 .about-stats {
-  margin-top: 40px;
+  margin-top: 36px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 22px;
 }
 
 .about-stats div {
-  padding: 26px;
+  padding: 28px;
   border-radius: 22px;
   background: rgba(0, 245, 255, 0.07);
   border: 1px solid rgba(0, 245, 255, 0.14);
@@ -52,23 +235,54 @@
 }
 
 .about-stats div:hover {
-  transform: translateY(-8px);
   border-color: rgba(0, 245, 255, 0.45);
+  box-shadow: 0 25px 70px rgba(0, 245, 255, 0.13);
 }
 
 .about-stats h3 {
   color: #00f5ff;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   margin-bottom: 6px;
 }
 
 .about-stats span {
   color: #dbeafe;
+  font-weight: 700;
 }
 
-@media (max-width: 850px) {
-  .about-card {
-    padding: 35px 24px;
+@media (max-width: 1100px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-details {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .expertise-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .about-section {
+    padding: 90px 6%;
+  }
+
+  .about-left {
+    padding: 34px 24px;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-details {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-stats {
@@ -77,7 +291,15 @@
 }
 
 @media (max-width: 480px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
   .about-stats {
     grid-template-columns: 1fr;
+  }
+
+  .about-profile-card {
+    padding: 26px 22px;
   }
 }
